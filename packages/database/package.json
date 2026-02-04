@@ -8,12 +8,13 @@
     "./generated/prisma": "./src/generated/prisma/client.ts"
   },
   "scripts": {
-    "generate": "prisma generate",
-    "build": "prisma generate",
-    "db:push": "prisma db push"
+    "db:generate": "prisma generate",
+    "db:migrate": "prisma migrate dev --skip-generate",
+    "db:deploy": "prisma migrate deploy"
   },
   "dependencies": {
     "@repo/types": "*",
+    "@prisma/extension-accelerate": "^3.0.1",
     "@prisma/client": "^7.3.0", 
     "bcryptjs": "^3.0.3"
   },
