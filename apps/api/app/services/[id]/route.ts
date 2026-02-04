@@ -1,6 +1,6 @@
 import { NextRequest, NextResponse } from "next/server"
 import { auth } from "@/auth"
-import { prisma } from "@/lib/prisma"
+import { prisma } from "@repo/database"
 
 // GET: Get a single service
 export async function GET(

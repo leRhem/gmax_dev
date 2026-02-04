@@ -1,6 +1,6 @@
 // app/api/invitations/[token]/route.ts
 import { NextRequest, NextResponse } from "next/server"
-import { prisma } from "@/lib/prisma"
+import { prisma } from "@repo/database"
 import bcrypt from "bcryptjs"
 
 interface RouteParams {

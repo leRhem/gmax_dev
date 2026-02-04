@@ -1,7 +1,7 @@
 // app/api/staff/route.ts
 import { NextRequest, NextResponse } from "next/server"
 import { auth } from "@/auth"
-import { prisma } from "@/lib/prisma"
+import { prisma } from "@repo/database"
 
 // GET: List staff (for photographer selection, etc.)
 export async function GET(request: NextRequest) {

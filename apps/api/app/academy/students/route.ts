@@ -1,7 +1,7 @@
 // app/api/academy/students/route.ts
 import { NextRequest, NextResponse } from "next/server"
 import { auth } from "@/auth"
-import { prisma } from "@repo/database/prisma"
+import { prisma } from "@repo/database"
 
 const ALLOWED_STATUSES = ["PENDING", "CONFIRMED", "IN_PROGRESS", "COMPLETED", "CANCELLED"]
 

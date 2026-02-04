@@ -22,19 +22,19 @@ import {
     IconCheck,
     IconClock,
 } from "@tabler/icons-react"
-import { Button } from "@/components/ui/button"
-import { Input } from "@/components/ui/input"
-import { Badge } from "@/components/ui/badge"
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
-import { ScrollArea } from "@/components/ui/scroll-area"
-import { Skeleton } from "@/components/ui/skeleton"
+import { Button } from "../ui/button"
+import { Input } from "../ui/input"
+import { Badge } from "../ui/badge"
+import { Avatar, AvatarFallback, AvatarImage } from "../ui/avatar"
+import { ScrollArea } from "../ui/scroll-area"
+import { Skeleton } from "../ui/skeleton"
 import {
     DropdownMenu,
     DropdownMenuContent,
     DropdownMenuItem,
     DropdownMenuSeparator,
     DropdownMenuTrigger,
-} from "@/components/ui/dropdown-menu"
+} from "../ui/dropdown-menu"
 import {
     AlertDialog,
     AlertDialogAction,
@@ -44,17 +44,17 @@ import {
     AlertDialogFooter,
     AlertDialogHeader,
     AlertDialogTitle,
-} from "@/components/ui/alert-dialog"
+} from "../ui/alert-dialog"
 import {
     Collapsible,
     CollapsibleContent,
     CollapsibleTrigger,
-} from "@/components/ui/collapsible"
-import { Card, CardContent, CardHeader } from "@/components/ui/card"
+} from "../ui/collapsible"
+import { Card, CardContent, CardHeader } from "../ui/card"
 import { InviteStaffDialog } from "./invite-staff-dialog"
 import { StaffPermissionsDialog } from "./staff-permissions-dialog"
 import { EditStaffDialog } from "./edit-staff-dialog"
-import { cn } from "@/lib/utils"
+import { cn } from "@repo/database"
 
 interface StaffStats {
     totalAssignments: number

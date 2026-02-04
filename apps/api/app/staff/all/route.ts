@@ -1,7 +1,7 @@
 // app/api/staff/all/route.ts
 import { NextRequest, NextResponse } from "next/server"
 import { auth } from "@/auth"
-import { prisma } from "@/lib/prisma"
+import { prisma } from "@repo/database"
 
 // GET: List all staff with stats (Admin only)
 export async function GET(request: NextRequest) {

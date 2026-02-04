@@ -1,10 +1,10 @@
 // app/api/bookings/[id]/route.ts
 import { NextRequest, NextResponse } from "next/server"
 import { auth } from "@/auth"
-import { prisma } from "@/lib/prisma"
+import { prisma } from "@repo/database"
 import { z } from "zod"
-import { sendNotification } from "@/lib/notifications"
-import { NotificationChannel } from "@/lib/generated/prisma"
+import { sendNotification } from "@repo/database"
+import { NotificationChannel } from "@repo/database/generated/prisma"
 
 const updateBookingSchema = z.object({
   clientId: z.string().cuid().optional(),

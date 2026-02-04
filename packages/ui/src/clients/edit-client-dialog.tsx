@@ -7,7 +7,7 @@ import {
   DialogHeader,
   DialogTitle,
 } from "../ui/dialog"
-import { Client } from "@repo/types/client"
+import { Client } from "@repo/types"
 import { EditClientForm } from "./edit-client-form"
 
 interface EditClientDialogProps {

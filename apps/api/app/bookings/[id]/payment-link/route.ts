@@ -1,8 +1,8 @@
 // app/api/bookings/[id]/payment-link/route.ts
 import { NextRequest, NextResponse } from "next/server"
 import { auth } from "@/auth"
-import { prisma } from "@/lib/prisma"
-import { generatePaymentLink, getPaymentLink } from "@/lib/paystack"
+import { prisma } from "@repo/database"
+import { generatePaymentLink, getPaymentLink } from "@repo/database"
 
 /**
  * GET: Get payment link for a booking

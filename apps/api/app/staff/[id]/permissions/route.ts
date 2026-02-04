@@ -1,9 +1,9 @@
 // app/api/staff/[id]/permissions/route.ts
 import { NextRequest, NextResponse } from "next/server"
 import { auth } from "@/auth"
-import { prisma } from "@/lib/prisma"
-import { PAGE_PERMISSIONS } from "@/lib/permissions"
-import { StaffRole } from "@/lib/generated/prisma"
+import { prisma } from "@repo/database"
+import { PAGE_PERMISSIONS } from "@repo/database"
+import { StaffRole } from "@repo/database/generated/prisma"
 
 interface RouteParams {
     params: Promise<{ id: string }>

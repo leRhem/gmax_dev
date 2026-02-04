@@ -3,7 +3,7 @@
 
 import * as React from "react"
 import { IconCheck, IconChevronDown, IconPlus, IconSearch } from "@tabler/icons-react"
-import { Button } from "@/components/ui/button"
+import { Button } from "../ui/button"
 import {
   Command,
   CommandEmpty,
@@ -12,13 +12,13 @@ import {
   CommandItem,
   CommandList,
   CommandSeparator,
-} from "@/components/ui/command"
+} from "../ui/command"
 import {
   Popover,
   PopoverContent,
   PopoverTrigger,
-} from "@/components/ui/popover"
-import { cn } from "@/lib/utils"
+} from "../ui/popover"
+import { cn } from "@repo/database"
 
 interface Client {
   id: string

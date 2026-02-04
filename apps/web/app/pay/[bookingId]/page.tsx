@@ -3,12 +3,12 @@ import { notFound, redirect } from "next/navigation"
 import Link from "next/link"
 import Image from "next/image"
 import { format } from "date-fns"
-import { prisma } from "@/lib/prisma"
-import { Prisma } from "@/lib/generated/prisma"
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
-import { Button } from "@/components/ui/button"
-import { Badge } from "@/components/ui/badge"
-import { Separator } from "@/components/ui/separator"
+import { prisma } from "@repo/database"
+import { Prisma } from "@repo/database/generated/prisma"
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@repo/ui/ui/card"
+import { Button } from "@repo/ui/ui/button"
+import { Badge } from "@repo/ui/ui/badge"
+import { Separator } from "@repo/ui/ui/separator"
 import {
   IconCheck,
   IconCalendar,
@@ -19,7 +19,7 @@ import {
   IconExternalLink,
   IconReceipt,
 } from "@tabler/icons-react"
-import { RescheduleDialog } from "@/components/bookings/reschedule-dialog"
+import { RescheduleDialog } from "@repo/ui/bookings/reschedule-dialog"
 
 
 // Define type for booking with includes - Fetch full service details for calculations
@@ -33,7 +33,7 @@ type BookingWithRelations = Prisma.BookingGetPayload<{
   }
 }>
 
-import { generatePaymentLink } from "@/lib/paystack"
+import { generatePaymentLink } from "@repo/database"
 
 async function getBookingForPayment(bookingId: string) {
   const booking = await prisma.booking.findUnique({

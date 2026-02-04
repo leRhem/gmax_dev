@@ -28,9 +28,9 @@ import {
   type DragStartEvent
 } from "@dnd-kit/core"
 import { IconChevronLeft, IconChevronRight, IconCheck, IconClock, IconAlertCircle } from "@tabler/icons-react"
-import { Button } from "@/components/ui/button"
-import { Badge } from "@/components/ui/badge"
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
+import { Button } from "../ui/button"
+import { Badge } from "../ui/badge"
+import { Avatar, AvatarFallback, AvatarImage } from "../ui/avatar"
 import {
   Dialog,
   DialogContent,
@@ -38,9 +38,9 @@ import {
   DialogHeader,
   DialogTitle,
   DialogFooter
-} from "@/components/ui/dialog"
-import { Calendar } from "@/components/ui/calendar"
-import { cn } from "@/lib/utils"
+} from "../ui/dialog"
+import { Calendar } from "../ui/calendar"
+import { cn } from "@repo/database"
 
 interface BookingEvent {
   id: string

@@ -45,7 +45,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@repo/ui/ui/card"
 import { Calendar } from "@repo/ui/ui/calendar"
 import { Separator } from "@repo/ui/ui/separator"
 import { Collapsible, CollapsibleContent, CollapsibleTrigger } from "@repo/ui/ui/collapsible"
-import { cn } from "@repo/lib/utils"
+import { cn } from "@repo/database"
 
 // --- Types ---
 interface Studio {

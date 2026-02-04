@@ -7,9 +7,9 @@ import { StaffCard } from "./staff-card"
 import { InviteStaffDialog } from "./invite-staff-dialog"
 import { StaffPermissionsDialog } from "./staff-permissions-dialog"
 import { EditStaffDialog } from "./edit-staff-dialog"
-import { Button } from "@/components/ui/button"
-import { Badge } from "@/components/ui/badge"
-import { Skeleton } from "@/components/ui/skeleton"
+import { Button } from "../ui/button"
+import { Badge } from "../ui/badge"
+import { Skeleton } from "../ui/skeleton"
 import {
     AlertDialog,
     AlertDialogAction,
@@ -19,7 +19,7 @@ import {
     AlertDialogFooter,
     AlertDialogHeader,
     AlertDialogTitle,
-} from "@/components/ui/alert-dialog"
+} from "../ui/alert-dialog"
 import {
     IconPlus,
     IconLoader2,

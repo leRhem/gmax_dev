@@ -9,8 +9,8 @@ import {
   IconHome,
   IconMail,
 } from "@tabler/icons-react"
-import { Button } from "@/components/ui/button"
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
+import { Button } from "@repo/ui/ui/button"
+import { Card, CardContent, CardHeader, CardTitle } from "@repo/ui/ui/card"
 
 // Force dynamic rendering since this page relies on searchParams
 export const dynamic = "force-dynamic"

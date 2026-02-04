@@ -1,8 +1,8 @@
 // app/api/academy/courses/route.ts
 import { NextRequest, NextResponse } from "next/server"
 import { auth } from "@/auth"
-import { prisma } from "@repo/database/prisma"
-import { Prisma } from "@repo/database"
+import { prisma } from "@repo/database"
+import { Prisma } from "@repo/database/generated/prisma"
 
 /**
  * GET: List all courses (filterable by studio, level)

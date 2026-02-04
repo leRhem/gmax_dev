@@ -1,8 +1,8 @@
 // app/api/staff/[id]/route.ts
 import { NextRequest, NextResponse } from "next/server"
 import { auth } from "@/auth"
-import { prisma } from "@/lib/prisma"
-import { StaffRole } from "@/lib/generated/prisma"
+import { prisma } from "@repo/database"
+import { StaffRole } from "@repo/database/generated/prisma"
 
 interface RouteParams {
     params: Promise<{ id: string }>

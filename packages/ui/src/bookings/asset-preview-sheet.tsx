@@ -11,8 +11,8 @@ import {
     IconPhoto,
     IconX,
 } from "@tabler/icons-react"
-import { Button } from "@/components/ui/button"
-import { Badge } from "@/components/ui/badge"
+import { Button } from "../ui/button"
+import { Badge } from "../ui/badge"
 import {
     Sheet,
     SheetContent,
@@ -20,10 +20,10 @@ import {
     SheetHeader,
     SheetTitle,
     SheetTrigger,
-} from "@/components/ui/sheet"
-import { ScrollArea } from "@/components/ui/scroll-area"
-import { Skeleton } from "@/components/ui/skeleton"
-import { cn } from "@/lib/utils"
+} from "../ui/sheet"
+import { ScrollArea } from "../ui/scroll-area"
+import { Skeleton } from "../ui/skeleton"
+import { cn } from "@repo/database"
 
 interface Photo {
     id: string

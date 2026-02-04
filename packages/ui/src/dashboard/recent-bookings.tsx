@@ -1,7 +1,7 @@
 "use strict";
 import { format } from "date-fns"
 import { IconCheck, IconClock, IconCreditCard, IconX } from "@tabler/icons-react"
-import { Badge } from "@/components/ui/badge"
+import { Badge } from "../ui/badge"
 import {
   Table,
   TableBody,
@@ -9,9 +9,9 @@ import {
   TableHead,
   TableHeader,
   TableRow,
-} from "@/components/ui/table"
-import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card"
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
+} from "../ui/table"
+import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "../ui/card"
+import { Avatar, AvatarFallback, AvatarImage } from "../ui/avatar"
 
 interface RecentBooking {
   id: string

@@ -1,8 +1,8 @@
 // app/api/cron/reminders/route.ts
 import { NextRequest, NextResponse } from "next/server"
-import { prisma } from "@/lib/prisma"
-import { sendNotification } from "@/lib/notifications"
-import { NotificationChannel, Prisma } from "@/lib/generated/prisma"
+import { prisma } from "@repo/database"
+import { sendNotification } from "@repo/database"
+import { NotificationChannel, Prisma } from "@repo/database/generated/prisma"
 
 // This route should be protected typically, but for Cron we might check a secret key header.
 export async function GET(request: NextRequest) {

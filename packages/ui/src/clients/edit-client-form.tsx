@@ -6,7 +6,7 @@ import { useForm } from "react-hook-form"
 import { zodResolver } from "@hookform/resolvers/zod"
 import { z } from "zod"
 import { toast } from "sonner"
-import { Client } from "@repo/types/client"
+import { Client } from "@repo/types"
 
 import { Button } from "../ui/button"
 import { Input } from "../ui/input"

@@ -1,9 +1,9 @@
 // app/api/staff/invite/route.ts
 import { NextRequest, NextResponse } from "next/server"
 import { auth } from "@/auth"
-import { prisma } from "@/lib/prisma"
-import { StaffRole, NotificationChannel } from "@/lib/generated/prisma"
-import { sendNotification } from "@/lib/notifications"
+import { prisma } from "@repo/database"
+import { StaffRole, NotificationChannel } from "@repo/database/generated/prisma"
+import { sendNotification } from "@repo/database"
 
 // POST: Create staff invitation
 export async function POST(request: NextRequest) {

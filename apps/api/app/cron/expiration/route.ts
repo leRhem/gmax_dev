@@ -1,8 +1,8 @@
 // app/api/cron/expiration/route.ts
 import { NextRequest, NextResponse } from "next/server"
-import { prisma } from "@/lib/prisma"
-import { sendNotification } from "@/lib/notifications"
-import { NotificationChannel } from "@/lib/generated/prisma"
+import { prisma } from "@repo/database"
+import { sendNotification } from "@repo/database"
+import { NotificationChannel } from "@repo/database/generated/prisma"
 
 export async function GET(request: NextRequest) {
   try {

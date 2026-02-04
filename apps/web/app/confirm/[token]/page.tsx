@@ -3,11 +3,11 @@ import { notFound } from "next/navigation"
 import Link from "next/link"
 import Image from "next/image"
 import { format } from "date-fns"
-import { prisma } from "@/lib/prisma"
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
-import { Button } from "@/components/ui/button"
-import { Badge } from "@/components/ui/badge"
-import { Separator } from "@/components/ui/separator"
+import { prisma } from "@repo/database"
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@repo/ui/ui/card"
+import { Button } from "@repo/ui/ui/button"
+import { Badge } from "@repo/ui/ui/badge"
+import { Separator } from "@repo/ui/ui/separator"
 import {
   IconCheck,
   IconCalendar,

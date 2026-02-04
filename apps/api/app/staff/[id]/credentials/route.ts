@@ -1,7 +1,7 @@
 import { NextRequest, NextResponse } from "next/server"
 import { auth } from "@/auth"
-import { prisma } from "@/lib/prisma"
-import { sendTermiiMessage, sendTermiiEmail } from "@/lib/notifications"
+import { prisma } from "@repo/database"
+import { sendTermiiMessage, sendTermiiEmail } from "@repo/database"
 
 export async function POST(
   request: NextRequest,

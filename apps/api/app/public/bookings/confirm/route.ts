@@ -1,7 +1,7 @@
 // app/api/public/bookings/confirm/route.ts
 // Public API for clients to confirm their bookings
 import { NextRequest, NextResponse } from "next/server"
-import { prisma } from "@/lib/prisma"
+import { prisma } from "@repo/database"
 import { z } from "zod"
 
 const confirmSchema = z.object({

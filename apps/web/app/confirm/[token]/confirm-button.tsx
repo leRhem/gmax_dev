@@ -3,7 +3,7 @@
 import { useState } from "react"
 import { useRouter } from "next/navigation"
 import { toast } from "sonner"
-import { Button } from "@/components/ui/button"
+import { Button } from "@repo/ui/ui/button"
 import { IconCheck, IconLoader2 } from "@tabler/icons-react"
 
 interface ConfirmBookingButtonProps {

@@ -1,6 +1,6 @@
-import { Button } from "@/components/ui/button"
-import { Separator } from "@/components/ui/separator"
-import { SidebarMenuButton, SidebarMenuItem, SidebarTrigger } from "@/components/ui/sidebar"
+import { Button } from "./ui/button"
+import { Separator } from "./ui/separator"
+import { SidebarMenuButton, SidebarMenuItem, SidebarTrigger } from "./ui/sidebar"
 import { IconCirclePlusFilled, IconNotification } from "@tabler/icons-react"
 
 export function SiteHeader() {

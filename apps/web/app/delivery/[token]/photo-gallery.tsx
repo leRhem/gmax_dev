@@ -11,16 +11,16 @@ import {
   IconPhoto,
   IconLock,
 } from "@tabler/icons-react"
-import { Button } from "@/components/ui/button"
-import { Card } from "@/components/ui/card"
-import { Badge } from "@/components/ui/badge"
+import { Button } from "@repo/ui/ui/button"
+import { Card } from "@repo/ui/ui/card"
+import { Badge } from "@repo/ui/ui/badge"
 import {
   Dialog,
   DialogContent,
   DialogHeader,
   DialogTitle,
-} from "@/components/ui/dialog"
-import { cn } from "@/lib/utils"
+} from "@repo/ui/ui/dialog"
+import { cn } from "@repo/database"
 
 interface Photo {
   id: string

@@ -1,7 +1,7 @@
 // app/api/public/delivery/[token]/route.ts
 // Public API for clients to view their photo delivery
 import { NextRequest, NextResponse } from "next/server"
-import { prisma } from "@/lib/prisma"
+import { prisma } from "@repo/database"
 
 /**
  * GET: Fetch delivery details using token

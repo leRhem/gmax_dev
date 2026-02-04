@@ -20,10 +20,10 @@ import {
 import Image from "next/image"
 import Link from "next/link"
 
-import { NavManagement } from "@/components/nav-management"
-import { NavMain } from "@/components/nav-main"
-import { NavSecondary } from "@/components/nav-secondary"
-import { NavUser } from "@/components/nav-user"
+import { NavManagement } from "./nav-management"
+import { NavMain } from "./nav-main"
+import { NavSecondary } from "./nav-secondary"
+import { NavUser } from "./nav-user"
 import {
   Sidebar,
   SidebarContent,
@@ -32,9 +32,9 @@ import {
   SidebarMenu,
   SidebarMenuButton,
   SidebarMenuItem,
-} from "@/components/ui/sidebar"
-import { getNavItemsForRole, type NavItem } from "@/lib/permissions"
-import type { StaffRole } from "@/lib/generated/prisma"
+} from "./ui/sidebar"
+import { getNavItemsForRole, type NavItem } from "@repo/database"
+import type { StaffRole } from "@repo/database/generated/prisma"
 
 // Icon mapping for dynamic rendering
 const iconMap = {

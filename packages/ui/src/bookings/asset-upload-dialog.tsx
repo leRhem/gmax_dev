@@ -11,10 +11,10 @@ import {
   DialogHeader,
   DialogTitle,
   DialogFooter,
-} from "@/components/ui/dialog"
-import { Button } from "@/components/ui/button"
-import { Progress } from "@/components/ui/progress"
-import { Alert, AlertDescription } from "@/components/ui/alert"
+} from "../ui/dialog"
+import { Button } from "../ui/button"
+import { Progress } from "../ui/progress"
+import { Alert, AlertDescription } from "../ui/alert"
 import {
   IconUpload,
   IconLoader2,
@@ -24,8 +24,8 @@ import {
   IconPhoto,
   IconTrash,
 } from "@tabler/icons-react"
-import { cn } from "@/lib/utils"
-import { Card } from "@/components/ui/card"
+import { cn } from "@repo/database"
+import { Card } from "../ui/card"
 
 interface AssetUploadDialogProps {
   open: boolean

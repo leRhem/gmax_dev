@@ -1,7 +1,7 @@
 // app/api/public/delivery/[token]/download/route.ts
 // Download individual photo from delivery portal
 import { NextRequest, NextResponse } from "next/server"
-import { prisma } from "@/lib/prisma"
+import { prisma } from "@repo/database"
 import { z } from "zod"
 
 const downloadSchema = z.object({

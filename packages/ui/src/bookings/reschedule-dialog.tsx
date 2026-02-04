@@ -3,7 +3,7 @@
 import { useState, useEffect } from "react"
 import { toast } from "sonner"
 import { format } from "date-fns"
-import { Calendar } from "@/components/ui/calendar"
+import { Calendar } from "../ui/calendar"
 import {
   Dialog,
   DialogContent,
@@ -12,16 +12,16 @@ import {
   DialogHeader,
   DialogTitle,
   DialogTrigger,
-} from "@/components/ui/dialog"
-import { Button } from "@/components/ui/button"
-import { Label } from "@/components/ui/label"
+} from "../ui/dialog"
+import { Button } from "../ui/button"
+import { Label } from "../ui/label"
 import {
   Select,
   SelectContent,
   SelectItem,
   SelectTrigger,
   SelectValue,
-} from "@/components/ui/select"
+} from "../ui/select"
 import { IconCalendar, IconClock, IconLoader2 } from "@tabler/icons-react"
 import { useRouter } from "next/navigation"
 

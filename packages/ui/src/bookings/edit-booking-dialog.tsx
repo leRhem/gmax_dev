@@ -13,31 +13,31 @@ import {
   DialogDescription,
   DialogHeader,
   DialogTitle,
-} from "@/components/ui/dialog"
-import { Button } from "@/components/ui/button"
-import { Input } from "@/components/ui/input"
-import { Label } from "@/components/ui/label"
-import { Textarea } from "@/components/ui/textarea"
+} from "../ui/dialog"
+import { Button } from "../ui/button"
+import { Input } from "../ui/input"
+import { Label } from "../ui/label"
+import { Textarea } from "../ui/textarea"
 import {
   Select,
   SelectContent,
   SelectItem,
   SelectTrigger,
   SelectValue,
-} from "@/components/ui/select"
+} from "../ui/select"
 import {
   Popover,
   PopoverContent,
   PopoverTrigger,
-} from "@/components/ui/popover"
-import { Calendar } from "@/components/ui/calendar"
-import { TimePickerPopover } from "@/components/ui/time-picker-popover"
-import { Alert, AlertDescription } from "@/components/ui/alert"
-import { CreateClientDialog } from "@/components/clients/create-client-dialog"
-import { ClientCombobox } from "@/components/bookings/client-combobox"
+} from "../ui/popover"
+import { Calendar } from "../ui/calendar"
+import { TimePickerPopover } from "../ui/time-picker-popover"
+import { Alert, AlertDescription } from "../ui/alert"
+import { CreateClientDialog } from "../clients/create-client-dialog"
+import { ClientCombobox } from "../bookings/client-combobox"
 import { IconLoader2, IconAlertCircle, IconCurrencyNaira, IconTrash, IconCalendar, IconPlus } from "@tabler/icons-react"
-import { Separator } from "@/components/ui/separator"
-import { cn } from "@/lib/utils"
+import { Separator } from "../ui/separator"
+import { cn } from "@repo/database"
 
 const bookingSchema = z.object({
   clientId: z.string().min(1, "Client is required"),

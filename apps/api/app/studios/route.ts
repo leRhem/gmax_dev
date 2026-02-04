@@ -1,7 +1,7 @@
 // app/api/studios/route.ts
 import { NextRequest, NextResponse } from "next/server"
 import { auth } from "@/auth"
-import { prisma } from "@/lib/prisma"
+import { prisma } from "@repo/database"
 import { z } from "zod"
 
 // Validation schema for creating/updating studio

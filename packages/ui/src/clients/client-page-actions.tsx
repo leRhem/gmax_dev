@@ -5,7 +5,7 @@ import { useRouter } from "next/navigation"
 import { Button } from "../ui/button"
 import { IconEdit } from "@tabler/icons-react"
 import { EditClientDialog } from "../clients/edit-client-dialog"
-import { Client } from "@repo/types/client"
+import { Client } from "@repo/types"
 
 interface ClientPageActionsProps {
   client: Client

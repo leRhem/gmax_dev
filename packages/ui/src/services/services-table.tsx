@@ -12,22 +12,22 @@ import {
     IconSearch,
     IconTrash,
 } from "@tabler/icons-react"
-import { Button } from "@/components/ui/button"
-import { Input } from "@/components/ui/input"
-import { Badge } from "@/components/ui/badge"
-import { ScrollArea } from "@/components/ui/scroll-area"
+import { Button } from "../ui/button"
+import { Input } from "../ui/input"
+import { Badge } from "../ui/badge"
+import { ScrollArea } from "../ui/scroll-area"
 import {
     Card,
     CardContent,
     CardDescription,
     CardHeader,
     CardTitle,
-} from "@/components/ui/card"
+} from "../ui/card"
 import {
     Collapsible,
     CollapsibleContent,
     CollapsibleTrigger,
-} from "@/components/ui/collapsible"
+} from "../ui/collapsible"
 import {
     Dialog,
     DialogContent,
@@ -35,18 +35,18 @@ import {
     DialogFooter,
     DialogHeader,
     DialogTitle,
-} from "@/components/ui/dialog"
-import { Separator } from "@/components/ui/separator"
-import { Label } from "@/components/ui/label"
-import { Switch } from "@/components/ui/switch"
-import { Textarea } from "@/components/ui/textarea"
+} from "../ui/dialog"
+import { Separator } from "../ui/separator"
+import { Label } from "../ui/label"
+import { Switch } from "../ui/switch"
+import { Textarea } from "../ui/textarea"
 import {
     Select,
     SelectContent,
     SelectItem,
     SelectTrigger,
     SelectValue,
-} from "@/components/ui/select"
+} from "../ui/select"
 import { toast } from "sonner"
 
 interface ServicePackage {

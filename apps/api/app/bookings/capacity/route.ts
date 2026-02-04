@@ -4,7 +4,7 @@
 
 import { NextRequest as NR, NextResponse as NRes } from "next/server"
 import { auth as authFn } from "@/auth"
-import { prisma as db } from "@/lib/prisma"
+import { prisma as db } from "@repo/database"
 
 // GET: Check daily capacity for a specific date
 export async function GET(request: NR) {

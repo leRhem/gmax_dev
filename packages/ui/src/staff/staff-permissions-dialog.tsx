@@ -10,14 +10,14 @@ import {
     DialogFooter,
     DialogHeader,
     DialogTitle,
-} from "@/components/ui/dialog"
-import { Button } from "@/components/ui/button"
-import { Switch } from "@/components/ui/switch"
-import { Label } from "@/components/ui/label"
-import { Badge } from "@/components/ui/badge"
-import { Skeleton } from "@/components/ui/skeleton"
+} from "../ui/dialog"
+import { Button } from "../ui/button"
+import { Switch } from "../ui/switch"
+import { Label } from "../ui/label"
+import { Badge } from "../ui/badge"
+import { Skeleton } from "../ui/skeleton"
 import { IconLoader2, IconLock, IconInfoCircle } from "@tabler/icons-react"
-import { Separator } from "@/components/ui/separator"
+import { Separator } from "../ui/separator"
 
 interface StaffPermissionsDialogProps {
     staffId: string

@@ -1,7 +1,7 @@
 
 export const dynamic = "force-dynamic"
 
-import { ComingSoon } from "@/components/coming-soon"
+import { ComingSoon } from "@repo/ui/coming-soon"
 
 export default async function HomePage() {
   // Show Coming Soon page for non-authenticated visitors

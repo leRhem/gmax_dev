@@ -1,7 +1,7 @@
 // app/api/academy/students/[id]/route.ts
 import { NextRequest, NextResponse } from "next/server"
 import { auth } from "@/auth"
-import { prisma } from "@repo/database/prisma"
+import { prisma } from "@repo/database"
 
 /**
  * GET: Single student details

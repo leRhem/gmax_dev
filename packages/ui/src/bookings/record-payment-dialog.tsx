@@ -13,18 +13,18 @@ import {
   DialogHeader,
   DialogTitle,
   DialogFooter,
-} from "@/components/ui/dialog"
-import { Button } from "@/components/ui/button"
-import { Input } from "@/components/ui/input"
-import { Textarea } from "@/components/ui/textarea"
-import { Label } from "@/components/ui/label"
+} from "../ui/dialog"
+import { Button } from "../ui/button"
+import { Input } from "../ui/input"
+import { Textarea } from "../ui/textarea"
+import { Label } from "../ui/label"
 import {
   Select,
   SelectContent,
   SelectItem,
   SelectTrigger,
   SelectValue,
-} from "@/components/ui/select"
+} from "../ui/select"
 import {
   Form,
   FormControl,
@@ -32,9 +32,9 @@ import {
   FormItem,
   FormLabel,
   FormMessage,
-} from "@/components/ui/form"
-import { Card, CardContent } from "@/components/ui/card"
-import { Badge } from "@/components/ui/badge"
+} from "../ui/form"
+import { Card, CardContent } from "../ui/card"
+import { Badge } from "../ui/badge"
 import {
   IconLoader2,
   IconCash,
@@ -42,7 +42,7 @@ import {
   IconBuildingBank,
   IconReceipt,
 } from "@tabler/icons-react"
-import { cn } from "@/lib/utils"
+import { cn } from "@repo/database"
 
 interface RecordPaymentDialogProps {
   open: boolean

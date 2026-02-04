@@ -15,8 +15,8 @@ import {
     IconUser,
     IconX,
 } from "@tabler/icons-react"
-import { Badge } from "@/components/ui/badge"
-import { Button } from "@/components/ui/button"
+import { Badge } from "../ui/badge"
+import { Button } from "../ui/button"
 import {
     Card,
     CardContent,
@@ -24,15 +24,15 @@ import {
     CardFooter,
     CardHeader,
     CardTitle,
-} from "@/components/ui/card"
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
+} from "../ui/card"
+import { Avatar, AvatarFallback, AvatarImage } from "../ui/avatar"
 import {
     Tooltip,
     TooltipContent,
     TooltipProvider,
     TooltipTrigger,
-} from "@/components/ui/tooltip"
-import { cn } from "@/lib/utils"
+} from "../ui/tooltip"
+import { cn } from "@repo/database"
 
 interface BookingCardProps {
     booking: {

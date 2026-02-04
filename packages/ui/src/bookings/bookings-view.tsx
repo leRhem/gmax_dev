@@ -3,11 +3,11 @@
 import { useState, useEffect } from "react"
 import { useRouter } from "next/navigation"
 import { IconCalendar, IconList, IconPlus } from "@tabler/icons-react"
-import { Button } from "@/components/ui/button"
-import { Tabs, TabsList, TabsTrigger } from "@/components/ui/tabs"
-import { BookingCalendar } from "@/components/calendar/booking-calendar"
-import { BookingsTable } from "@/components/bookings/bookings-table"
-import { BookingDialog } from "@/components/bookings/booking-dialog"
+import { Button } from "../ui/button"
+import { Tabs, TabsList, TabsTrigger } from "../ui/tabs"
+import { BookingCalendar } from "../calendar/booking-calendar"
+import { BookingsTable } from "./bookings-table"
+import { BookingDialog } from "./booking-dialog"
 import { toast } from "sonner"
 
 interface BookingsViewProps {

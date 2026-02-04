@@ -1,7 +1,7 @@
 // app/api/staff/overview/route.ts
 import { NextResponse } from "next/server"
 import { auth } from "@/auth"
-import { prisma } from "@/lib/prisma"
+import { prisma } from "@repo/database"
 
 export async function GET() {
   try {

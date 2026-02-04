@@ -1,6 +1,6 @@
 // app/api/public/academy/route.ts
 import { NextRequest, NextResponse } from "next/server"
-import { prisma } from "@/lib/prisma"
+import { prisma } from "@repo/database"
 
 /**
  * GET: Public courses list (active only)

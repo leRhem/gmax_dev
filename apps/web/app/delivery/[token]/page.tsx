@@ -1,7 +1,7 @@
 // app/(public)/delivery/[token]/page.tsx
 // Photo delivery portal - clients view and download their photos
 import { redirect } from "next/navigation"
-import { prisma } from "@/lib/prisma"
+import { prisma } from "@repo/database"
 import Image from "next/image"
 import Link from "next/link"
 import { format } from "date-fns"
@@ -15,9 +15,9 @@ import {
   IconAlertCircle,
   IconClock,
 } from "@tabler/icons-react"
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
-import { Badge } from "@/components/ui/badge"
-import { Separator } from "@/components/ui/separator"
+import { Card, CardContent, CardHeader, CardTitle } from "@repo/ui/ui/card"
+import { Badge } from "@repo/ui/ui/badge"
+import { Separator } from "@repo/ui/ui/separator"
 import { PhotoGallery } from "./photo-gallery"
 
 interface Props {

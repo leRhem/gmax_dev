@@ -3,7 +3,7 @@
 import { useEffect, useState, useCallback } from "react"
 import { useRouter, useSearchParams } from "next/navigation"
 import { IconPlus, IconSearch, IconFilter, IconEdit, IconTrash, IconUsers } from "@tabler/icons-react"
-import { Client, ClientType } from "@repo/types/client"
+import { Client, ClientType } from "@repo/types"
 import { Button } from "../ui/button"
 import { Input } from "../ui/input"
 import {

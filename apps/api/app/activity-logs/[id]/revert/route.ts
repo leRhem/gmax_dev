@@ -1,8 +1,8 @@
 // app/api/activity-logs/[id]/revert/route.ts
 import { NextRequest, NextResponse } from "next/server"
 import { auth } from "@/auth"
-import { prisma } from "@/lib/prisma"
-import { canRevertLog, logActivity } from "@/lib/activity-logger"
+import { prisma } from "@repo/database"
+import { canRevertLog, logActivity } from "@repo/database"
 
 interface RouteParams {
     params: Promise<{ id: string }>

@@ -5,10 +5,11 @@
   "exports": {
     ".": "./index.ts",
     "./prisma": "./src/prisma.ts",
-    "./generated/prisma": "./generated/prisma/client.ts"
+    "./generated/prisma": "./src/generated/prisma/client.ts"
   },
   "scripts": {
     "generate": "prisma generate",
+    "build": "prisma generate",
     "db:push": "prisma db push"
   },
   "dependencies": {

@@ -1,9 +1,9 @@
 // app/api/clients/route.ts
 import { NextRequest, NextResponse } from "next/server"
 import { auth } from "@/auth"
-import { prisma } from "@/lib/prisma"
+import { prisma } from "@repo/database"
 import { z } from "zod"
-import { ClientType } from "@/types/client"
+import { ClientType } from "@repo/types"
 
 // Validation schema
 const createClientSchema = z.object({

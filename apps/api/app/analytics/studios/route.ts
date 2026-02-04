@@ -2,7 +2,7 @@
 // Studios comparison API (Admin only) - returns metrics for all studios
 import { NextRequest, NextResponse } from "next/server"
 import { auth } from "@/auth"
-import { prisma } from "@/lib/prisma"
+import { prisma } from "@repo/database"
 
 /**
  * GET: Fetch studio comparison data (Admin only)

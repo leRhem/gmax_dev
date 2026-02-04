@@ -13,33 +13,33 @@ import {
   DialogDescription,
   DialogHeader,
   DialogTitle,
-} from "@/components/ui/dialog"
-import { Button } from "@/components/ui/button"
-import { Input } from "@/components/ui/input"
-import { Label } from "@/components/ui/label"
-import { Textarea } from "@/components/ui/textarea"
+} from "../ui/dialog"
+import { Button } from "../ui/button"
+import { Input } from "../ui/input"
+import { Label } from "../ui/label"
+import { Textarea } from "../ui/textarea"
 import {
   Select,
   SelectContent,
   SelectItem,
   SelectTrigger,
   SelectValue,
-} from "@/components/ui/select"
+} from "../ui/select"
 import {
   Popover,
   PopoverContent,
   PopoverTrigger,
-} from "@/components/ui/popover"
+} from "../ui/popover"
 import {
   Collapsible,
   CollapsibleContent,
   CollapsibleTrigger,
-} from "@/components/ui/collapsible"
-import { Calendar } from "@/components/ui/calendar"
-import { TimePickerPopover } from "@/components/ui/time-picker-popover"
-import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert"
-import { ClientCombobox } from "@/components/bookings/client-combobox"
-import { CreateClientDialog } from "@/components/clients/create-client-dialog"
+} from "../ui/collapsible"
+import { Calendar } from "../ui/calendar"
+import { TimePickerPopover } from "../ui/time-picker-popover"
+import { Alert, AlertDescription, AlertTitle } from "../ui/alert"
+import { ClientCombobox } from "./client-combobox"
+import { CreateClientDialog } from "../clients/create-client-dialog"
 import {
   IconLoader2,
   IconAlertCircle,
@@ -53,10 +53,10 @@ import {
   IconCheck,
   IconClock,
 } from "@tabler/icons-react"
-import { Badge } from "@/components/ui/badge"
-import { Separator } from "@/components/ui/separator"
-import { Card } from "@/components/ui/card"
-import { cn } from "@/lib/utils"
+import { Badge } from "../ui/badge"
+import { Separator } from "../ui/separator"
+import { Card } from "../ui/card"
+import { cn } from "@repo/database"
 
 const bookingSchema = z.object({
   clientId: z.string().min(1, "Client is required"),

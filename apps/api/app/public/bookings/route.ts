@@ -1,7 +1,7 @@
 // app/api/public/bookings/route.ts
 // Public API for clients to create bookings without authentication
 import { NextRequest, NextResponse } from "next/server"
-import { prisma } from "@/lib/prisma"
+import { prisma } from "@repo/database"
 import { z } from "zod"
 
 // Schema for public booking creation

@@ -1,7 +1,7 @@
 // app/api/services/route.ts (ENHANCED VERSION)
 import { NextRequest, NextResponse } from "next/server"
 import { auth } from "@/auth"
-import { prisma } from "@/lib/prisma"
+import { prisma } from "@repo/database"
 
 // GET: List all services with session configuration
 export async function GET(request: NextRequest) {

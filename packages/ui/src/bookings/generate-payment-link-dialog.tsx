@@ -10,12 +10,12 @@ import {
   DialogHeader,
   DialogTitle,
   DialogFooter,
-} from "@/components/ui/dialog"
-import { Button } from "@/components/ui/button"
-import { Input } from "@/components/ui/input"
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
-import { Badge } from "@/components/ui/badge"
-import { Alert, AlertDescription } from "@/components/ui/alert"
+} from "../ui/dialog"
+import { Button } from "../ui/button"
+import { Input } from "../ui/input"
+import { Card, CardContent, CardHeader, CardTitle } from "../ui/card"
+import { Badge } from "../ui/badge"
+import { Alert, AlertDescription } from "../ui/alert"
 import {
   IconLoader2,
   IconLink,
@@ -26,7 +26,7 @@ import {
   IconBrandWhatsapp,
   IconMail,
 } from "@tabler/icons-react"
-import { cn } from "@/lib/utils"
+import { cn } from "@repo/database"
 
 interface GeneratePaymentLinkDialogProps {
   open: boolean

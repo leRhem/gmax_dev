@@ -2,22 +2,22 @@
 
 import { useState } from "react"
 import { useRouter } from "next/navigation"
-import { Button } from "@/components/ui/button"
+import { Button } from "../ui/button"
 import {
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuItem,
   DropdownMenuTrigger,
-} from "@/components/ui/dropdown-menu"
+} from "../ui/dropdown-menu"
 import {
   IconEdit,
   IconCash,
   IconDotsVertical,
   IconCloudUpload,
 } from "@tabler/icons-react"
-import { EditBookingDialog } from "@/components/bookings/edit-booking-dialog"
-import { RecordPaymentDialog } from "@/components/bookings/record-payment-dialog"
-import { AssetUploadDialog } from "@/components/bookings/asset-upload-dialog"
+import { EditBookingDialog } from "./edit-booking-dialog"
+import { RecordPaymentDialog } from "./record-payment-dialog"
+import { AssetUploadDialog } from "./asset-upload-dialog"
 
 interface BookingItem {
   id: string

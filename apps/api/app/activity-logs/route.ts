@@ -1,8 +1,8 @@
 // app/api/activity-logs/route.ts
 import { NextRequest, NextResponse } from "next/server"
 import { auth } from "@/auth"
-import { prisma } from "@/lib/prisma"
-import { canRevertLog } from "@/lib/activity-logger"
+import { prisma } from "@repo/database"
+import { canRevertLog } from "@repo/database"
 
 // GET: List activity logs with filtering
 export async function GET(request: NextRequest) {

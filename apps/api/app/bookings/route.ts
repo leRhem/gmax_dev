@@ -1,8 +1,8 @@
 import { NextRequest, NextResponse } from "next/server"
 import { auth } from "@/auth"
-import { prisma } from "@/lib/prisma"
+import { prisma } from "@repo/database"
 import { z } from "zod"
-import { generatePaymentLink } from "@/lib/paystack"
+import { generatePaymentLink } from "@repo/database"
 
 // Enhanced validation schema
 const createBookingSchema = z.object({

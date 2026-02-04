@@ -1,7 +1,7 @@
 // app/api/public/services/route.ts
 // Public API for listing available services
 import { NextRequest, NextResponse } from "next/server"
-import { prisma } from "@/lib/prisma"
+import { prisma } from "@repo/database"
 
 /**
  * GET: List active services grouped by category
