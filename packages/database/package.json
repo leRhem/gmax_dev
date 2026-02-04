@@ -1,0 +1,23 @@
+{
+  "name": "@repo/database",
+  "version": "0.0.0",
+  "private": true,
+  "exports": {
+    ".": "./index.ts",
+    "./prisma": "./src/prisma.ts",
+    "./generated/prisma": "./generated/prisma/client.ts"
+  },
+  "scripts": {
+    "generate": "prisma generate",
+    "db:push": "prisma db push"
+  },
+  "dependencies": {
+    "@repo/types": "*",
+    "@prisma/client": "^7.3.0", 
+    "bcryptjs": "^3.0.3"
+  },
+  "devDependencies": {
+    "prisma": "^7.3.0",
+    "typescript": "^5.9.3"
+  }
+}
