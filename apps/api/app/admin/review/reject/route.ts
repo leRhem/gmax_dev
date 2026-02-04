@@ -1,7 +1,7 @@
 // app/api/admin/review/reject/route.ts
 import { NextRequest, NextResponse } from "next/server"
 import { auth } from "@/auth"
-import { prisma } from "@/lib/prisma"
+import { prisma } from "@repo/database"
 import { sendTermiiMessage } from "@repo/database"
 
 export async function POST(request: NextRequest) {
