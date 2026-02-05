@@ -9,7 +9,7 @@ import {
   PopoverContent,
   PopoverTrigger,
 } from "./popover"
-import { cn } from "@repo/database"
+import { cn } from "@repo/database/utils"
 
 interface TimePickerPopoverProps {
   value?: string

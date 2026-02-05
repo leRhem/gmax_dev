@@ -1,6 +1,8 @@
 import { PrismaClient } from './generated/prisma/client'
 import { withAccelerate } from '@prisma/extension-accelerate'
 
+export * from './generated/prisma/client'
+
 const url = process.env.DATABASE_URL
 if (!url) {
   console.log('⚠️ DATABASE_URL is undefined. Using placeholder for build.')

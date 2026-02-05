@@ -3,6 +3,7 @@
 import { useState, useEffect } from "react"
 import Link from "next/link"
 import { toast } from "sonner"
+import { API_BASE_URL } from "@repo/database/api-config"
 import {
   IconSchool,
   IconClock,
@@ -66,7 +67,7 @@ export default function AcademyPage() {
   const fetchCourses = async () => {
     try {
       setError(null)
-      const response = await fetch("/api/public/academy")
+      const response = await fetch(`${API_BASE_URL}/api/public/academy`)
       if (response.ok) {
         const data = (await response.json()) as any
         setCourses(data.courses || [])
@@ -105,7 +106,7 @@ export default function AcademyPage() {
 
     try {
       setIsSubmitting(true)
-      const response = await fetch("/api/public/academy", {
+      const response = await fetch(`${API_BASE_URL}/api/public/academy`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({

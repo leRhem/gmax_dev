@@ -209,7 +209,12 @@ export function hasPageAccess(userRole: StaffRole, path: string): boolean {
         return false // Fail-closed: deny access if no permission defined
     }
 
-    const allowedRoles = PAGE_PERMISSIONS[matchingRoutes[0]]
+    // Fix: Add '!' to assert the value is not undefined
+    const allowedRoles = PAGE_PERMISSIONS[matchingRoutes[0]!] 
+    
+    // Safety check just in case allowedRoles is somehow undefined (optional but safer)
+    if (!allowedRoles) return false;
+
     return allowedRoles.includes(userRole)
 }
 

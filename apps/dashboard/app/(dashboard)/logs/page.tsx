@@ -135,7 +135,7 @@ export default function ActivityLogsPage() {
                     .slice(0, 2)
             }
         }
-        return staff.email[0].toUpperCase()
+        return staff.email?.[0]?.toUpperCase() ?? "?"
     }
 
     return (

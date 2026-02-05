@@ -54,7 +54,7 @@ import { Card, CardContent, CardHeader } from "../ui/card"
 import { InviteStaffDialog } from "./invite-staff-dialog"
 import { StaffPermissionsDialog } from "./staff-permissions-dialog"
 import { EditStaffDialog } from "./edit-staff-dialog"
-import { cn } from "@repo/database"
+import { cn } from "@repo/database/utils"
 
 interface StaffStats {
     totalAssignments: number
@@ -482,7 +482,7 @@ function StaffRow({
 
     const initials = staff.name
         ? staff.name.split(" ").map((n) => n[0]).join("").toUpperCase().slice(0, 2)
-        : staff.email[0].toUpperCase()
+        : staff.email?.[0]?.toUpperCase() ?? "?"
 
     const handleToggleExpand = async () => {
         const newExpanded = !isExpanded

@@ -106,7 +106,7 @@ export async function POST(request: NextRequest) {
         FOR UPDATE OF c
       `
 
-      if (courseRows.length === 0 || !courseRows[0].isActive) {
+      if (courseRows.length === 0 || !courseRows[0]?.isActive) {
         throw new Error("COURSE_NOT_FOUND")
       }
 

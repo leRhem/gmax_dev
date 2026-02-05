@@ -26,7 +26,7 @@ import {
   IconBrandWhatsapp,
   IconMail,
 } from "@tabler/icons-react"
-import { cn } from "@repo/database"
+import { cn } from "@repo/database/utils"
 
 interface GeneratePaymentLinkDialogProps {
   open: boolean

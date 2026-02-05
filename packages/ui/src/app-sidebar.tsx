@@ -33,7 +33,7 @@ import {
   SidebarMenuButton,
   SidebarMenuItem,
 } from "./ui/sidebar"
-import { getNavItemsForRole, type NavItem } from "@repo/database"
+import { getNavItemsForRole, type NavItem } from "@repo/database/permissions"
 import type { StaffRole } from "@repo/database/generated/prisma"
 
 // Icon mapping for dynamic rendering

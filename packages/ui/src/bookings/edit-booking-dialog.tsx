@@ -37,7 +37,7 @@ import { CreateClientDialog } from "../clients/create-client-dialog"
 import { ClientCombobox } from "../bookings/client-combobox"
 import { IconLoader2, IconAlertCircle, IconCurrencyNaira, IconTrash, IconCalendar, IconPlus } from "@tabler/icons-react"
 import { Separator } from "../ui/separator"
-import { cn } from "@repo/database"
+import { cn } from "@repo/database/utils"
 
 const bookingSchema = z.object({
   clientId: z.string().min(1, "Client is required"),

@@ -1,8 +1,8 @@
 // middleware.ts
-import { NextResponse } from "next/server"
+import { NextResponse, type NextRequest } from "next/server"
 import { auth } from "./auth"
 import { PAGE_PERMISSIONS } from "@repo/database"
-import type { StaffRole } from "@repo/database/src/generated/prisma"
+import type { StaffRole } from "@repo/database/generated/prisma"
 
 /**
  * Get the subdomain from a hostname
@@ -13,7 +13,7 @@ import type { StaffRole } from "@repo/database/src/generated/prisma"
  */
 function getSubdomain(hostname: string): string | null {
   // Remove port if present
-  const host = hostname.split(":")[0]
+  const host = hostname.split(":")[0] || ""
   
   // For localhost development, check for subdomain simulation via query param or header
   if (host === "localhost" || host === "127.0.0.1") {
@@ -29,7 +29,7 @@ function getSubdomain(hostname: string): string | null {
     if (subdomain === "www") {
       return null
     }
-    return subdomain
+    return subdomain || null
   }
   
   return null
@@ -58,11 +58,11 @@ function hasAccess(userRole: StaffRole, pathname: string): boolean {
     return true
   }
 
-  const allowedRoles = PAGE_PERMISSIONS[matchingRoutes[0]]
-  return allowedRoles.includes(userRole)
+  const allowedRoles = PAGE_PERMISSIONS[matchingRoutes[0]!]
+  return allowedRoles!.includes(userRole)
 }
 
-export default auth((req) => {
+export default auth((req: any) => {
   const hostname = req.headers.get("host") || ""
   const subdomain = getSubdomain(hostname)
   let { pathname } = req.nextUrl

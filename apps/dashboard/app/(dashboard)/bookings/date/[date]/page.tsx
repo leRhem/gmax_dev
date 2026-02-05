@@ -2,9 +2,9 @@ import { Suspense } from "react"
 import { notFound } from "next/navigation"
 import { format, parseISO, isValid } from "date-fns"
 import { auth } from "@/auth"
-import { prisma } from "@/lib/prisma"
+import { prisma } from "@repo/database/prisma"
 import { DatePageClient } from "./date-page-client"
-import { Skeleton } from "@/components/ui/skeleton"
+import { Skeleton } from "@repo/ui/ui/skeleton"
 
 interface DatePageProps {
     params: Promise<{ date: string }>

@@ -3,9 +3,9 @@
 import { useState, useEffect } from "react"
 import { useSearchParams, useRouter } from "next/navigation"
 import { toast } from "sonner"
-import { Button } from "@/components/ui/button"
-import { Input } from "@/components/ui/input"
-import { Label } from "@/components/ui/label"
+import { Button } from "@repo/ui/ui/button"
+import { Input } from "@repo/ui/ui/input"
+import { Label } from "@repo/ui/ui/label"
 import { IconLoader2, IconEye, IconEyeOff, IconCheck } from "@tabler/icons-react"
 
 export function UpdateCredentialsForm() {

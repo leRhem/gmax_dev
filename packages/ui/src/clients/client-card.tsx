@@ -27,7 +27,7 @@ import {
     DropdownMenuTrigger,
 } from "../ui/dropdown-menu"
 import { Avatar, AvatarFallback } from "../ui/avatar"
-import { cn } from "@repo/database"
+import { cn } from "@repo/database/utils"
 import { Client, ClientType } from "@repo/types"
 
 interface ClientCardProps {

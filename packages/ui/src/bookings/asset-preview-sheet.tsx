@@ -23,7 +23,7 @@ import {
 } from "../ui/sheet"
 import { ScrollArea } from "../ui/scroll-area"
 import { Skeleton } from "../ui/skeleton"
-import { cn } from "@repo/database"
+import { cn } from "@repo/database/utils"
 
 interface Photo {
     id: string

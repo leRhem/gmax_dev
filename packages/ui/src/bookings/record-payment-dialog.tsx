@@ -42,7 +42,7 @@ import {
   IconBuildingBank,
   IconReceipt,
 } from "@tabler/icons-react"
-import { cn } from "@repo/database"
+import { cn } from "@repo/database/utils"
 
 interface RecordPaymentDialogProps {
   open: boolean

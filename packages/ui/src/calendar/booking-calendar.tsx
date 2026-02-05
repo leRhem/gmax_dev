@@ -40,7 +40,7 @@ import {
   DialogFooter
 } from "../ui/dialog"
 import { Calendar } from "../ui/calendar"
-import { cn } from "@repo/database"
+import { cn } from "@repo/database/utils"
 
 interface BookingEvent {
   id: string

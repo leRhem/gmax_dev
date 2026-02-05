@@ -23,6 +23,7 @@ import {
 } from "@tabler/icons-react"
 import { useEffect, useState } from "react"
 import { jsPDF } from "jspdf"
+import { API_BASE_URL } from "@repo/database/api-config"
 
 // Define types for the data
 interface PaymentData {
@@ -65,7 +66,7 @@ export default function ReceiptPage() {
   useEffect(() => {
     async function fetchReceipt() {
       try {
-        const res = await fetch(`/api/receipt/${paymentId}`)
+        const res = await fetch(`${API_BASE_URL}/api/receipt/${paymentId}`)
         if (!res.ok) {
           if (res.status === 404) {
             setError("Receipt not found")

@@ -24,7 +24,7 @@ import {
   IconPhoto,
   IconTrash,
 } from "@tabler/icons-react"
-import { cn } from "@repo/database"
+import { cn } from "@repo/database/utils"
 import { Card } from "../ui/card"
 
 interface AssetUploadDialogProps {
@@ -105,11 +105,12 @@ export function AssetUploadDialog({
       // Upload each file
       for (let i = 0; i < files.length; i++) {
         const uploadFile = files[i]
+        if (!uploadFile) continue
 
         // Update status
         setFiles((prev) =>
           prev.map((f) =>
-            f.id === uploadFile.id ? { ...f, status: "uploading" } : f
+            f.id === uploadFile?.id ? { ...f, status: "uploading" } : f
           )
         )
 

@@ -45,7 +45,8 @@ import { Card, CardContent, CardHeader, CardTitle } from "@repo/ui/ui/card"
 import { Calendar } from "@repo/ui/ui/calendar"
 import { Separator } from "@repo/ui/ui/separator"
 import { Collapsible, CollapsibleContent, CollapsibleTrigger } from "@repo/ui/ui/collapsible"
-import { cn } from "@repo/database"
+import { cn } from "@repo/database/utils"
+import { API_BASE_URL } from "@repo/database/api-config"
 
 // --- Types ---
 interface Studio {
@@ -475,8 +476,8 @@ export default function BookPage() {
     const fetchData = async () => {
       try {
         const [studiosRes, servicesRes] = await Promise.all([
-          fetch("/api/public/bookings"),
-          fetch("/api/public/services"),
+          fetch(`${API_BASE_URL}/api/public/bookings`),
+          fetch(`${API_BASE_URL}/api/public/services`),
         ])
         if (studiosRes.ok) {
            const data = (await studiosRes.json()) as any
@@ -530,11 +531,11 @@ export default function BookPage() {
         setIsSubmitting(false);
         return;
       }
-      const [hours, minutes] = data.bookingTime.split(":").map(Number)
+      const [hours = 0, minutes = 0] = data.bookingTime.split(":").map(Number)
       const bookingDate = new Date(data.bookingDate)
       bookingDate.setHours(hours, minutes, 0, 0)
 
-      const response = await fetch("/api/public/bookings", {
+      const response = await fetch(`${API_BASE_URL}/api/public/bookings`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({

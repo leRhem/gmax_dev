@@ -5,7 +5,8 @@
   "exports": {
     ".": "./index.ts",
     "./prisma": "./src/prisma.ts",
-    "./generated/prisma": "./src/generated/prisma/client.ts"
+    "./*": "./src/*.ts",
+    "./generated/prisma": "./src/generated/prisma/index.js"
   },
   "scripts": {
     "generate": "prisma generate",
@@ -13,9 +14,11 @@
     "db:push": "prisma db push"
   },
   "dependencies": {
+    "@prisma/client": "^7.3.0",
     "@repo/types": "*",
-    "@prisma/client": "^7.3.0", 
-    "bcryptjs": "^3.0.3"
+    "bcryptjs": "^3.0.3",
+    "clsx": "^2.1.1",
+    "tailwind-merge": "^3.4.0"
   },
   "devDependencies": {
     "prisma": "^7.3.0",

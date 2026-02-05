@@ -21,7 +21,7 @@ import {
     IconMail,
     IconPhone,
 } from "@tabler/icons-react"
-import { cn } from "@repo/database"
+import { cn } from "@repo/database/utils"
 
 interface StaffCardProps {
     staff: {

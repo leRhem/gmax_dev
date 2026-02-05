@@ -5,6 +5,7 @@ import { useRouter } from "next/navigation"
 import { toast } from "sonner"
 import { Button } from "@repo/ui/ui/button"
 import { IconCheck, IconLoader2 } from "@tabler/icons-react"
+import { API_BASE_URL } from "@repo/database/api-config"
 
 interface ConfirmBookingButtonProps {
   confirmationId: string
@@ -23,7 +24,7 @@ export function ConfirmBookingButton({
   const handleConfirm = async () => {
     setIsLoading(true)
     try {
-      const response = await fetch(`/api/public/bookings/confirm`, {
+      const response = await fetch(`${API_BASE_URL}/api/public/bookings/confirm`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ confirmationId }),

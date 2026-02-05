@@ -20,7 +20,7 @@ function getSubdomain(hostname: string): string | null {
     return null // Handle in dev with query params if needed
   }
   
-  const parts = host.split(".")
+  const parts = (host || "").split(".")
   
   // Check for subdomain (e.g., dash.gmaxstudioz.com has 3 parts)
   if (parts.length >= 3) {
@@ -29,7 +29,7 @@ function getSubdomain(hostname: string): string | null {
     if (subdomain === "www") {
       return null
     }
-    return subdomain
+    return subdomain || null
   }
   
   return null
@@ -58,11 +58,11 @@ function hasAccess(userRole: StaffRole, pathname: string): boolean {
     return true
   }
 
-  const allowedRoles = PAGE_PERMISSIONS[matchingRoutes[0]]
-  return allowedRoles.includes(userRole)
+  const allowedRoles = PAGE_PERMISSIONS[matchingRoutes[0]!]
+  return allowedRoles!.includes(userRole)
 }
 
-export default auth((req) => {
+export default auth((req: any) => {
   const hostname = req.headers.get("host") || ""
   const subdomain = getSubdomain(hostname)
   let { pathname } = req.nextUrl

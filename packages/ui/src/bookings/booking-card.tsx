@@ -32,7 +32,7 @@ import {
     TooltipProvider,
     TooltipTrigger,
 } from "../ui/tooltip"
-import { cn } from "@repo/database"
+import { cn } from "@repo/database/utils"
 
 interface BookingCardProps {
     booking: {

@@ -48,11 +48,11 @@ export function RescheduleDialog({ bookingId, currentDate }: RescheduleDialogPro
     if (TIME_SLOTS.includes(formatted)) return formatted
     
     const currentMinutes = d.getHours() * 60 + d.getMinutes()
-    let nearest = TIME_SLOTS[0]
+    let nearest = TIME_SLOTS[0] || "09:00"
     let minDiff = Infinity
     
     TIME_SLOTS.forEach(slot => {
-        const [h, m] = slot.split(":").map(Number)
+        const [h = 0, m = 0] = slot.split(":").map(Number)
         const slotMinutes = h * 60 + m
         const diff = Math.abs(currentMinutes - slotMinutes)
         if (diff < minDiff) {
@@ -73,7 +73,7 @@ export function RescheduleDialog({ bookingId, currentDate }: RescheduleDialogPro
     const isToday = date.toDateString() === now.toDateString()
     if (!isToday) return true
     
-    const [h, m] = slot.split(":").map(Number)
+    const [h = 0, m = 0] = slot.split(":").map(Number)
     const slotTime = new Date(date)
     slotTime.setHours(h, m, 0, 0)
     return slotTime > now
@@ -82,7 +82,7 @@ export function RescheduleDialog({ bookingId, currentDate }: RescheduleDialogPro
   // Ensure selected time is still valid when date changes
   useEffect(() => {
      if (date && time && !filteredSlots.includes(time)) {
-        if (filteredSlots.length > 0) setTime(filteredSlots[0])
+        if (filteredSlots.length > 0) setTime(filteredSlots[0]!)
      }
   }, [date, filteredSlots, time])
 
@@ -95,7 +95,7 @@ export function RescheduleDialog({ bookingId, currentDate }: RescheduleDialogPro
     setIsLoading(true)
     try {
       // Combine date and time
-      const [hours, minutes] = time.split(":").map(Number)
+      const [hours = 0, minutes = 0] = time.split(":").map(Number)
       const newDate = new Date(date)
       newDate.setHours(hours, minutes, 0, 0)
 
@@ -163,7 +163,7 @@ export function RescheduleDialog({ bookingId, currentDate }: RescheduleDialogPro
                 onSelect={(val) => {
                   if (val && time) {
                     const d = new Date(val)
-                    const [h, m] = time.split(":").map(Number)
+                    const [h = 0, m = 0] = time.split(":").map(Number)
                     d.setHours(h, m, 0, 0)
                     setDate(d)
                   } else {
@@ -182,7 +182,7 @@ export function RescheduleDialog({ bookingId, currentDate }: RescheduleDialogPro
               setTime(val)
               if (date) {
                 const d = new Date(date)
-                const [h, m] = val.split(":").map(Number)
+                const [h = 0, m = 0] = val.split(":").map(Number)
                 d.setHours(h, m, 0, 0)
                 setDate(d)
               }

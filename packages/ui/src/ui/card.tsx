@@ -1,6 +1,6 @@
 import * as React from "react"
 
-import { cn } from "@repo/database"
+import { cn } from "@repo/database/utils"
 
 function Card({ className, ...props }: React.ComponentProps<"div">) {
   return (

@@ -49,7 +49,7 @@ import {
 } from "@tabler/icons-react"
 import { Badge } from "../ui/badge"
 import { Separator } from "../ui/separator"
-import { cn } from "@repo/database"
+import { cn } from "@repo/database/utils"
 import { ClientCombobox } from "./client-combobox"
 import { CreateClientDialog } from "../clients/create-client-dialog"
 

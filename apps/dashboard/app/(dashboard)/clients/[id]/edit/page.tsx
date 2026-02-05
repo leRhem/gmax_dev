@@ -1,8 +1,8 @@
 import { notFound } from "next/navigation"
-import { auth } from "@repo/auth"
+import { auth } from "@/auth"
 import { prisma } from "@repo/database"
 import { EditClientForm } from "@repo/ui/clients/edit-client-form"
-import { Client } from "@repo/types/client"
+import { Client } from "@repo/types"
 
 async function getClient(id: string): Promise<Client | null> {
   const client = await prisma.client.findUnique({

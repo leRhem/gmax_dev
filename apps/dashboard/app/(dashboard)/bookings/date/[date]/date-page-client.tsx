@@ -12,12 +12,12 @@ import {
     IconCalendarEvent,
     IconUsers,
 } from "@tabler/icons-react"
-import { Button } from "@/components/ui/button"
-import { Badge } from "@/components/ui/badge"
-import { Progress } from "@/components/ui/progress"
-import { BookingCard } from "@/components/bookings/booking-card"
-import { BookingDialog } from "@/components/bookings/booking-dialog"
-import { cn } from "@/lib/utils"
+import { Button } from "@repo/ui/ui/button"
+import { Badge } from "@repo/ui/ui/badge"
+import { Progress } from "@repo/ui/ui/progress"
+import { BookingCard } from "@repo/ui/bookings/booking-card"
+import { BookingDialog } from "@repo/ui/bookings/booking-dialog"
+import { cn } from "@repo/database/utils"
 
 interface Booking {
     id: string

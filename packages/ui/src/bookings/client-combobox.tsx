@@ -18,7 +18,7 @@ import {
   PopoverContent,
   PopoverTrigger,
 } from "../ui/popover"
-import { cn } from "@repo/database"
+import { cn } from "@repo/database/utils"
 
 interface Client {
   id: string

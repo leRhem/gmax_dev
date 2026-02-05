@@ -56,7 +56,7 @@ import {
 import { Badge } from "../ui/badge"
 import { Separator } from "../ui/separator"
 import { Card } from "../ui/card"
-import { cn } from "@repo/database"
+import { cn } from "@repo/database/utils"
 
 const bookingSchema = z.object({
   clientId: z.string().min(1, "Client is required"),
@@ -175,7 +175,7 @@ export function BookingDialog({
   // Expand first category when categories load
   useEffect(() => {
     if (categories.length > 0 && Object.keys(expandedCategories).length === 0) {
-      setExpandedCategories({ [categories[0].id]: true })
+      setExpandedCategories({ [categories[0]!.id]: true })
     }
   }, [categories])
 
@@ -900,7 +900,7 @@ function parseAndValidateTime(
     !/^[0-9]{1,2}:[0-9]{2}$/.test(timeString)
   )
     return null
-  const [hoursStr, minutesStr] = timeString.split(":")
+  const [hoursStr = "0", minutesStr = "0"] = timeString.split(":")
   const hours = Number(hoursStr)
   const minutes = Number(minutesStr)
   if (

@@ -1,6 +1,6 @@
 import { notFound } from "next/navigation"
 import Link from "next/link"
-import { auth } from "@auth"
+import { auth } from "@/auth"
 import { prisma } from "@repo/database"
 import { Button } from "@repo/ui/ui/button"
 import { Badge } from "@repo/ui/ui/badge"
@@ -16,7 +16,7 @@ import {
   IconCalendar,
   IconCurrencyNaira,
 } from "@tabler/icons-react"
-import { ClientType } from "@repo/types/client"
+import { ClientType } from "@repo/types"
 import { formatDistanceToNow } from "date-fns"
 import { ClientPageActions } from "@repo/ui/clients/client-page-actions"
 

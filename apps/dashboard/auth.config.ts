@@ -2,7 +2,7 @@
 import type { NextAuthConfig } from "next-auth"
 import Credentials from "next-auth/providers/credentials"
 import { z } from "zod"
-import type { StaffRole } from "@repo/types/staff"
+import type { StaffRole } from "@repo/types"
 
 // Validation schema for login
 const loginSchema = z.object({
@@ -22,7 +22,7 @@ export default {
         try {
           // IMPORTANT: Dynamic imports to avoid Edge Runtime issues
           const bcrypt = await import("bcryptjs")
-          const { prisma } = await import("@repo/lib/prisma")
+          const { prisma } = await import("@repo/database/prisma")
           
           // Validate input
           const { email, password } = loginSchema.parse(credentials)

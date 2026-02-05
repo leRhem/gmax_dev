@@ -20,7 +20,8 @@ import {
   DialogHeader,
   DialogTitle,
 } from "@repo/ui/ui/dialog"
-import { cn } from "@repo/database"
+import { cn } from "@repo/database/utils"
+import { API_BASE_URL } from "@repo/database/api-config"
 
 interface Photo {
   id: string
@@ -53,7 +54,7 @@ export function PhotoGallery({ photos, token, canDownload }: PhotoGalleryProps) 
     setDownloadingIds(prev => new Set(prev).add(photo.id))
 
     try {
-      const response = await fetch(`/api/public/delivery/${token}/download`, {
+      const response = await fetch(`${API_BASE_URL}/api/public/delivery/${token}/download`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ photoId: photo.id }),
@@ -104,7 +105,7 @@ export function PhotoGallery({ photos, token, canDownload }: PhotoGalleryProps) 
       }
 
       try {
-        const response = await fetch(`/api/public/delivery/${token}/download`, {
+        const response = await fetch(`${API_BASE_URL}/api/public/delivery/${token}/download`, {
           method: "POST",
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify({ photoId: photo.id }),
